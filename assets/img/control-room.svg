@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Control room with mixing desk and monitors">
+<defs><filter id="gr2"><feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="3" stitchTiles="stitch"/><feColorMatrix type="saturate" values="0"/></filter></defs>
+<rect width="1200" height="900" fill="#26382E"/>
+<g fill="#2F4536"><rect x="0" y="0" width="1200" height="520"/></g>
+<g fill="#F5C11E" opacity=".9"><circle cx="600" cy="180" r="90"/></g>
+<circle cx="600" cy="180" r="52" fill="#26382E"/><circle cx="600" cy="180" r="12" fill="#F1E6CF"/>
+<g fill="#F1E6CF" opacity=".16">
+  <rect x="120" y="80" width="200" height="300" rx="10"/><rect x="880" y="80" width="200" height="300" rx="10"/>
+</g>
+<g fill="#16130F">
+  <rect x="140" y="360" width="160" height="220" rx="10"/><rect x="900" y="360" width="160" height="220" rx="10"/>
+</g>
+<g fill="#C6603F"><circle cx="220" cy="430" r="46"/><circle cx="980" cy="430" r="46"/></g>
+<g fill="#F1E6CF"><circle cx="220" cy="520" r="22"/><circle cx="980" cy="520" r="22"/></g>
+<path d="M260 600h680l60 140H200z" fill="#C6603F"/>
+<path d="M300 620h600l40 100H260z" fill="#EFE3C8"/>
+<g fill="#26382E">
+  <g><rect x="320" y="640" width="10" height="60" rx="5"/><rect x="360" y="640" width="10" height="60" rx="5"/><rect x="400" y="640" width="10" height="60" rx="5"/><rect x="440" y="640" width="10" height="60" rx="5"/><rect x="480" y="640" width="10" height="60" rx="5"/><rect x="520" y="640" width="10" height="60" rx="5"/><rect x="560" y="640" width="10" height="60" rx="5"/><rect x="600" y="640" width="10" height="60" rx="5"/><rect x="640" y="640" width="10" height="60" rx="5"/><rect x="680" y="640" width="10" height="60" rx="5"/><rect x="720" y="640" width="10" height="60" rx="5"/><rect x="760" y="640" width="10" height="60" rx="5"/><rect x="800" y="640" width="10" height="60" rx="5"/><rect x="840" y="640" width="10" height="60" rx="5"/></g>
+</g>
+<g fill="#F5C11E"><rect x="360" y="656" width="10" height="14" rx="5"/><rect x="480" y="668" width="10" height="14" rx="5"/><rect x="640" y="648" width="10" height="14" rx="5"/><rect x="800" y="676" width="10" height="14" rx="5"/></g>
+<rect x="180" y="740" width="840" height="160" fill="#1E2C23"/>
+<g fill="#26382E"><rect x="60" y="560" width="14" height="200"/><ellipse cx="67" cy="520" rx="70" ry="90"/></g>
+<g fill="#3B5442"><path d="M1090 760c-40-30-50-100-20-150 8 44 28 66 44 80-22-52-8-104 22-134-8 52 14 90 30 120-8-60 22-96 52-112-22 44-14 96-8 134z"/></g>
+<rect width="1200" height="900" filter="url(#gr2)" opacity=".2" style="mix-blend-mode:multiply"/>
+</svg>

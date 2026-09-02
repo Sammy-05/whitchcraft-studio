@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" preserveAspectRatio="xMidYMid slice" role="img" aria-label="A bedroom with morning light">
+<defs><filter id="gr4"><feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="3" stitchTiles="stitch"/><feColorMatrix type="saturate" values="0"/></filter></defs>
+<rect width="1200" height="900" fill="#EFE3C8"/>
+<rect x="740" y="70" width="360" height="420" rx="180" fill="#F5C11E"/>
+<g stroke="#EFE3C8" stroke-width="16"><path d="M920 70v420M740 280h360"/></g>
+<path d="M740 490 640 900h620l-160-410z" fill="#F5C11E" opacity=".28"/>
+<g fill="#26382E">
+  <rect x="120" y="360" width="60" height="380" rx="10"/><rect x="620" y="470" width="50" height="270" rx="10"/>
+  <rect x="120" y="470" width="550" height="60" rx="16"/>
+</g>
+<rect x="140" y="530" width="510" height="130" rx="18" fill="#C6603F"/>
+<g fill="#F1E6CF"><rect x="170" y="500" width="170" height="80" rx="20"/><rect x="360" y="500" width="170" height="80" rx="20"/></g>
+<path d="M140 600h510v60H140z" fill="#26382E" opacity=".85"/>
+<g fill="#26382E"><rect x="140" y="655" width="510" height="16" rx="8"/></g>
+<g fill="#16130F"><rect x="150" y="660" width="16" height="80"/><rect x="626" y="660" width="16" height="80"/></g>
+<g fill="#26382E">
+  <rect x="740" y="640" width="120" height="100" rx="12"/>
+  <path d="M800 640c-40-30-46-100-20-140 6 42 24 62 40 76-20-50-6-100 20-128-6 50 12 86 26 114-6-56 20-92 50-108-20 42-12 92-6 128z"/>
+</g>
+<g fill="#C6603F"><rect x="960" y="560" width="20" height="180"/><path d="M910 560h120l-24-70h-72z"/></g>
+<circle cx="970" cy="530" r="14" fill="#F5C11E"/>
+<rect y="740" width="1200" height="160" fill="#26382E"/>
+<rect y="740" width="1200" height="16" fill="#16130F" opacity=".3"/>
+<rect width="1200" height="900" filter="url(#gr4)" opacity=".16" style="mix-blend-mode:multiply"/>
+</svg>
