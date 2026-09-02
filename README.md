@@ -1,40 +1,43 @@
 # Whitchcraft Studio — website concept
 
-A design concept for **Whitchcraft Studio**, a creative residency and recording space in a 1911 villa in St-Ursanne, Swiss Jura.
+A design concept for **Whitchcraft Studio**, a recording studio and creative residency in a 1911 villa in St-Ursanne, in the Swiss Jura.
 
-**Live demo:** https://sammy-05.github.io/whitchcraft-studio/
+**Live:** https://sammy-05.github.io/whitchcraft-studio/
 
 ## What this is
 
-A one-page site covering the seven requested sections — Home, About us, The Space, Overnight & Residency, Booking & Rates, References, Contact — with a working **EN / DE language switch** (top right, remembered between visits, defaults to the browser language).
+One page covering the seven requested sections — Home, About us, The Space, Overnight & Residency, Booking & Rates, References, Contact — with a working **EN / DE switch** in the masthead. It swaps every string on the page, including form labels, placeholders and select options, remembers the choice, and falls back to the browser language on a first visit.
 
-Built as plain HTML, CSS and vanilla JS: no build step, no dependencies, loads in well under a second.
+Plain HTML, CSS and vanilla JS. No build step, no framework, no dependency beyond two webfonts.
 
 ## Design notes
 
-- **Palette** — warm paper (`#F6F2E9`), ink, a Jura yellow (`#F5C11E`), forest green and clay. Bright, but held together by lots of empty space.
-- **Type** — Fraunces for display (a warm, slightly wonky serif — vintage charm, modern cut) against Inter for text. Strong size contrast does the heavy lifting.
-- **Texture** — a fine paper grain over the whole page so the flat colour never feels sterile.
-- **Motion** — restrained: a marquee, soft reveals on scroll, slow image zoom on hover. All of it respects `prefers-reduced-motion`.
+The reference points are printed matter rather than websites: an exhibition catalogue, a letterpress rate card, a small hotel's stationery.
+
+- **Structure.** Sections are introduced by a hairline rule with the section name set small in the left margin, so the page reads as a document with running heads. No numbered chapters, no badges, no cards.
+- **Type.** Fraunces carries every display line — a warm, high-contrast serif with vintage bones and a modern cut. Instrument Sans handles everything else. Scale contrast does the work; there is no decoration.
+- **Colour.** Warm paper, near-black ink, a Jura yellow, forest green, and a clay red used only for accents. Two sections break the paper: the overnight section in forest, the references in full yellow.
+- **Rates** are set as a printed price list with dotted leaders rather than pricing cards, which is both more honest to the place and easier for the client to extend.
+- **Motion** is limited to a short fade on figures and section heads, and respects `prefers-reduced-motion`. The hero is never animated, so the page is readable the instant it paints.
 
 ## Placeholders
 
 Everything here is stand-in content, ready to be swapped for the real material:
 
-- **Images** — riso-style SVG illustrations in `assets/img/`. These are drop-in replacements for the studio's own photography.
-- **Copy** — written to show tone and length in both languages; the client's real EN/DE copy replaces it 1:1.
-- **Rates and reference quotes** — placeholder figures and testimonials (flagged as such on the page).
-- **Contact form** — validates and shows a confirmation, but is not wired to an inbox. Point it at Formspree, Basin or a Wix form to go live.
+- **Photographs** are placeholders from [Unsplash](https://unsplash.com), colour-graded to one family so the page reads as a single shoot. Replace the files in `assets/img/` with the studio's own photography at the same aspect ratios.
+- **Copy** was written to show tone and length in both languages; the client's real EN/DE text replaces it one-for-one.
+- **Rates and reference quotes** are invented, and flagged as placeholders on the page itself.
+- **The contact form** validates and confirms, but is not wired to an inbox. Point it at Formspree, Basin, or a Wix form to go live.
 
 ## Editing text
 
-All bilingual strings live on the element itself:
+Every bilingual string lives on the element:
 
 ```html
 <p data-en="English text" data-de="Deutscher Text">English text</p>
 ```
 
-`assets/js/main.js` swaps `textContent` on toggle. Placeholders use `data-en-ph` / `data-de-ph`.
+`assets/js/main.js` swaps `textContent` when the language changes. Input placeholders use `data-en-ph` / `data-de-ph`.
 
 ## Running locally
 
@@ -45,4 +48,4 @@ python3 -m http.server 8000
 
 ## Handover
 
-The client asked for something they can edit themselves (they already have Wix). This build is the design direction — the same layout, palette and type system rebuild cleanly in Wix Studio, Squarespace or Webflow, with the bilingual sections mapped to the platform's own language manager.
+The client asked for something they can edit themselves and already have a Wix subscription. This build is the design direction, not the final platform: the grid, palette, type system and section structure all rebuild cleanly in Wix Studio, Squarespace or Webflow, with the bilingual pairs mapped onto the platform's own language manager.

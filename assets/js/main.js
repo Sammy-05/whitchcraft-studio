@@ -5,8 +5,8 @@
   /* ---------- language ---------- */
   var STORE = 'wc-lang';
   var titles = {
-    en: 'Whitchcraft Studio — Recording & residency in St-Ursanne',
-    de: 'Whitchcraft Studio — Aufnahme & Residenz in St-Ursanne'
+    en: 'Whitchcraft Studio — St-Ursanne',
+    de: 'Whitchcraft Studio — St-Ursanne'
   };
 
   function setLang(lang) {
@@ -39,11 +39,9 @@
   try { saved = localStorage.getItem(STORE); } catch (e) {}
   setLang(saved || (navigator.language || '').slice(0, 2).toLowerCase());
 
-  /* ---------- sticky header ---------- */
-  var head = document.getElementById('head');
-  var onScroll = function () {
-    head.classList.toggle('is-stuck', window.scrollY > 24);
-  };
+  /* ---------- masthead ---------- */
+  var head = document.getElementById('masthead');
+  var onScroll = function () { head.classList.toggle('stuck', window.scrollY > 20); };
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
 
@@ -59,8 +57,7 @@
   }
 
   burger.addEventListener('click', function () {
-    var open = burger.getAttribute('aria-expanded') === 'true';
-    if (open) return closeMenu();
+    if (burger.getAttribute('aria-expanded') === 'true') return closeMenu();
     menu.hidden = false;
     burger.setAttribute('aria-expanded', 'true');
     document.body.style.overflow = 'hidden';
@@ -75,19 +72,18 @@
     if (e.key === 'Escape' && !menu.hidden) closeMenu();
   });
 
-  /* ---------- scroll reveal ---------- */
-  var items = document.querySelectorAll('.reveal');
+  /* ---------- reveal ---------- */
+  var items = document.querySelectorAll('.rv');
   if (!('IntersectionObserver' in window)) {
     items.forEach(function (el) { el.classList.add('in'); });
   } else {
     var io = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry, i) {
+      entries.forEach(function (entry) {
         if (!entry.isIntersecting) return;
-        var el = entry.target;
-        setTimeout(function () { el.classList.add('in'); }, i * 70);
-        io.unobserve(el);
+        entry.target.classList.add('in');
+        io.unobserve(entry.target);
       });
-    }, { rootMargin: '0px 0px -8% 0px', threshold: 0.06 });
+    }, { rootMargin: '0px 0px -6% 0px', threshold: 0.04 });
     items.forEach(function (el) { io.observe(el); });
   }
 
@@ -95,8 +91,14 @@
   var form = document.getElementById('form');
   var msg = document.getElementById('formMsg');
   var copy = {
-    bad: { en: 'Please fill in your name, a valid email and a message.', de: 'Bitte Name, gültige E-Mail und Nachricht ausfüllen.' },
-    ok: { en: 'Thank you — this demo form is not connected yet. Hook it up to your inbox and we are live.', de: 'Danke — dieses Demo-Formular ist noch nicht verbunden. Mit eurem Posteingang verknüpfen und es läuft.' }
+    bad: {
+      en: 'Please add your name, a valid email and a message.',
+      de: 'Bitte Name, gültige E-Mail und Nachricht ergänzen.'
+    },
+    ok: {
+      en: 'Thank you. This demo form is not connected to an inbox yet.',
+      de: 'Danke. Dieses Demo-Formular ist noch nicht mit einem Postfach verbunden.'
+    }
   };
 
   form.addEventListener('submit', function (e) {
@@ -106,11 +108,11 @@
 
     form.querySelectorAll('[required]').forEach(function (input) {
       var good = input.value.trim() !== '' && input.checkValidity();
-      input.closest('.field').classList.toggle('is-bad', !good);
+      input.closest('.f').classList.toggle('bad', !good);
       if (!good) ok = false;
     });
 
-    msg.classList.toggle('is-ok', ok);
+    msg.classList.toggle('ok', ok);
     msg.textContent = ok ? copy.ok[lang] : copy.bad[lang];
     if (ok) form.reset();
   });
